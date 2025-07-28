@@ -1,4 +1,3 @@
-package_json = """
 {
   "name": "live-chat-render",
   "version": "1.0.0",
@@ -11,4 +10,4 @@ package_json = """
     "socket.io": "^4.7.2"
   }
 }
-"""
+
