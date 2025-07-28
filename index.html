@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Chat</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-2xl bg-white/10 backdrop-blur p-6 rounded-xl shadow-lg space-y-4">
+    <h1 class="text-2xl font-bold text-center">Live Chat App</h1>
+    <div id="login" class="space-y-2">
+      <input id="username" placeholder="Enter your name" style="color: #ec4899;"
+        class="w-full p-2 rounded bg-white/20 placeholder-pink-300 focus:outline-none" />
+      <button onclick="joinChat()" class="w-full bg-blue-600 hover:bg-blue-700 p-2 rounded">Join</button>
+    </div>
+    <div id="chat" class="hidden space-y-2">
+      <div class="text-sm">🟢 Online: <span id="onlineCount">0</span></div>
+      <div id="usersList" class="text-xs flex flex-wrap gap-2"></div>
+      <div id="messages" class="h-64 overflow-y-auto bg-white/10 p-3 rounded space-y-1 text-sm"></div>
+      <div class="flex gap-2">
+        <input id="messageInput" style="color: #a855f7;" placeholder="Type a message..."
+          class="flex-1 p-2 rounded bg-white/20 placeholder-purple-300 focus:outline-none" />
+        <button onclick="sendMessage()" class="bg-green-600 hover:bg-green-700 p-2 rounded">Send</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
